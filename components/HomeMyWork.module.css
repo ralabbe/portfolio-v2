@@ -1,0 +1,100 @@
+.wrapper {
+    background: white;
+    padding: 1.5rem 0 1rem;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.wrapper:after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    background: linear-gradient(to top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+}
+
+/* Banner */
+.banner {
+    overflow: hidden;
+    margin: 1rem 0;
+    text-align: center;
+    background: var(--primary-color);
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    box-shadow: 0 0 0 6px var(--primary-color-dark);
+    padding: 3px 0;
+    position: relative;
+
+    font-family: var(--font-barlow-condensed);
+    text-transform: uppercase;
+}
+
+.banner h2 {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    background: var(--primary-color);
+    padding: 0 1.5rem;
+}
+
+.bannerBackgroundText {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    width: 100%;
+    font-size: 3rem;
+    opacity: .1;
+    word-spacing: 3px;
+    white-space: nowrap;
+    user-select: none;
+}
+
+/* Card List */
+.cardList {
+    margin: 6rem auto;
+    display: flex;
+    justify-content: center;
+}
+
+.cardWrapper {
+    flex-grow: 1;
+    width: calc(25% - 10rem);
+    max-width: 340px;
+    margin: 0 2rem;
+}
+
+@media (max-width: 1500px){
+    .cardList {
+        flex-wrap: wrap;
+    }
+
+    .cardWrapper {
+        flex-grow: 0;
+        width: 300px;
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 800px){
+    .cardList {
+        padding: 0;
+    }
+
+    .cardWrapper {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .cardWrapper [class*="ProjectCard_card"] {
+        max-width: 340px;
+        margin: 0 auto;
+    }
+}

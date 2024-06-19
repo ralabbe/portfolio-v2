@@ -1,0 +1,38 @@
+.card {
+    --border: 3.5px solid black;
+    position: relative;
+    background: white;
+    border: var(--border);
+    box-sizing: border-box;
+    border-radius: var(--border-radius);
+    padding: calc(1rem + 10px) 1rem 1rem;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.title {
+    margin: -50px auto 0;
+    width: 80%;
+    padding: .5rem;
+    border-radius: 6px;
+    border: var(--border);
+    box-sizing: border-box;
+}
+
+.description {
+    font-weight: 500;
+    margin-bottom: .6rem;
+}
+
+.fillerCard {
+    --border: 1.5px solid #bbb;
+    opacity: .5;
+    background: #f3f3f3;
+}
+
+.fillerCard .title {
+    background: url('/img/linesg.svg') #f3f3f3;
+    background-size: cover;
+    background-position: bottom;
+}

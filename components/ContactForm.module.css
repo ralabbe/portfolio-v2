@@ -1,0 +1,139 @@
+/* Header */
+.formHeaderWrapper {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.formHeader {
+    position: relative;
+    background: var(--primary-color);
+    padding: .5rem 2rem;
+}
+
+.formHeader:before,
+.formHeader:after {
+    content: '';
+    display: block;
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.formHeader:before {
+    width: 5px;
+    border-left: 8px solid var(--primary-color);
+    border-right: 12px solid var(--primary-color);
+    left: calc(-.3rem - 25px);
+}
+
+.formHeader:after {
+    width: 5px;
+    border-left: 12px solid var(--primary-color);
+    border-right: 8px solid var(--primary-color);
+    right: calc(-.3rem - 25px);
+}
+
+/* Form */
+.formWrapper {
+    position: relative;
+}
+
+.inputWrapper {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.inputWrapperDuo {
+    display: flex;
+    gap: 2rem;
+}
+
+.inputWrapperDuo > * {
+    flex-grow: 1;
+}
+
+.inputWrapper label {
+    margin-bottom: .5rem;
+    display: block;
+    font-weight: 500;
+}
+
+.requiredLabel:after {
+    content: ' *';
+    color: var(--primary-color);
+}
+
+.inputWrapper input, .inputWrapper textarea {
+    width: calc(100% - 16px);
+    background: transparent;
+    border: none;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 8px;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.inputWrapper textarea {
+    resize: none;
+}
+
+.formWrapper [class*=buttonWrapper] {
+    width: auto;
+}
+
+.formErr {
+    margin: .5rem 0 0;
+    color: var(--primary-color);
+}
+
+/* Success Message */
+.formSentMessageWrapper {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    text-align: center;
+    animation: fadeIn .4s linear forwards;
+}
+
+.formSentMessage {
+    text-align: center;
+}
+
+.formSentMessage img {
+    margin-bottom: 1rem;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 600px){
+    .inputWrapperDuo {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+@media (max-width: 600px){
+    .formHeaderWrapper {
+        background: var(--primary-color);
+        padding: .5rem 1rem;
+    }
+
+    .formHeader {
+        padding: 0;
+        background: none;
+    }
+
+    .formHeader:before,
+    .formHeader:after {
+        display: none;
+    }
+}
