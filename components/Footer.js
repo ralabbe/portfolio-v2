@@ -20,6 +20,7 @@ const Footer = () => {
         </div>
         <div className={styles.footerRightWrapper}>
           <div><Button text="Resume" icon="file" href="https://www.ralabbe.com/files/RafaelLabbe_Resume.pdf" target="_blank" /></div>
+          <div><Button href="https://github.com/ralabbe" text="GitHub" ariaLabel="View my Github repo" target="_blank" icon="github" iconType="fab" /></div>
           <div><Button text="Linkedin" icon="linkedin" iconType="fab" href="https://www.linkedin.com/in/ralabbe" target="_blank" /></div>
           <div><ContactFormButton text="Email me" /></div>
           

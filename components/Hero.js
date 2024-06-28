@@ -36,6 +36,7 @@ const Hero = () => {
           <nav className={styles.buttonGroup}>
             <Button href="#mywork" text="Work" ariaLabel="View my work" icon="laptop" />
             <Button href="#aboutme" text="About" ariaLabel="Learn about me" icon="id-badge" />
+            <Button href="https://github.com/ralabbe" text="GitHub" ariaLabel="View my Github repo" target="_blank" icon="github" iconType="fab" />
             <ContactFormButton />
           </nav>
         </div>

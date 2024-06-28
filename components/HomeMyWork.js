@@ -23,9 +23,10 @@ const HomeMyWork = () => {
         <p>
           The form was created using a Next.js API route which runs a check with <strong>reCaptcha v3</strong> before sending an email using the <strong>Nodemailer</strong> package. Once the email is sent to the client successfully, the user on the front end receives a success message notifying them of a successful form submission.
         </p>
-        <p style={{textAlign: "center", marginBottom: 0}}>
-          <Button href="https://www.wotautogarage.com" target="_blank" text="View Site" color="red" />
-        </p>
+        <div style={{display: 'flex', justifyContent: 'center', gap: '5px', flexWrap: 'wrap'}}>
+          <Button href="https://www.wotautogarage.com" target="_blank" text="View Site" ariaLabel="Visit the Wide Open Throttle site" color="red" />
+          <Button href="https://github.com/ralabbe/wideopenthrottle" target="_blank" text="View Git Repo"  ariaLabel="View git repo for the Wide Open Throttle project" color="white" />
+        </div>
         </>
       ]
     },
@@ -44,7 +45,7 @@ const HomeMyWork = () => {
         <p>
           I used <strong>Figma</strong> to design and plan the aesthetics of the web game then started coding it using <strong>React</strong>. I used this as an opportunity to also learn a bit of <strong>.NET</strong> and <strong>SignalR</strong> for the backend for the room system and game mechanics. I hooked on to the backend using websocks via <strong>Socket.IO</strong>.
         </p>
-        <strong>This project is still under development.</strong>
+        <p><strong>This project is still under development.</strong></p>
         </>
       ]
     },
@@ -63,10 +64,11 @@ const HomeMyWork = () => {
         <p>
           I used the <strong>Axios</strong> package to connect to a <strong>PHP</strong> backend where I created custom queries using <strong>SQL</strong>. These queries were used to add, edit, and delete entries on a <strong>MySQL</strong> database including account information and steam key data tied to accounts. I also gathered a full list of steam games using their own <strong>API</strong> to generate a list of Steam games in a dropdown for users to select which is associated with a key.
         </p>
-        <strong>This project is still under development.</strong>
-        <p style={{textAlign: "center", marginBottom: 0}}>
-          <Button href="/vid/steamkey-demo.mp4" target="_blank" text="View a demo" color="red" />
-        </p>
+        <p><strong>This project is still under development.</strong></p>
+        <div style={{display: 'flex', justifyContent: 'center', gap: '5px', flexWrap: 'wrap'}}>
+          <Button href="/vid/steamkey-demo.mp4" target="_blank" text="View a demo" ariaLabel="Watch a video demo of the steam key storage project" color="red" />
+          <Button href="https://github.com/ralabbe/steamkeystorage" target="_blank" text="View Git Repo" ariaLabel="View git repo for the steam key storage project" color="white" />
+        </div>
         </>
       ]
     },
@@ -88,6 +90,12 @@ const HomeMyWork = () => {
           <p>
             I&apos;ve had to migrate WordPress instances between servers in the past which involves exporting and importing database tables and downloading server files. I have also had to manually make edits to WordPress databases for several different reasons such as the server migrations mentioned before, manually resetting passwords, troubleshooting site issues, and more.
           </p>
+          <p>
+            Check out my GitHub repo for several projects related to a few WordPress projects.
+          </p>
+          <div style={{display: 'flex', justifyContent: 'center', gap: '5px', flexWrap: 'wrap'}}>
+            <Button href="https://github.com/ralabbe?tab=repositories&q=wordpress" target="_blank" text="View WordPress Git Repos" ariaLabel="View my github for several project repos" color="red" />
+          </div>
         </>
       ]
     }

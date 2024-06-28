@@ -76,6 +76,7 @@ const AboutMeElement = () => {
             <div className={`styledWhiteBackground ${styles.footerTop}`}>
               <span className={styles.footerText}>Contact</span>
               <div className={styles.footerButtonWrapper}>
+                <Button text="Linkedin" icon="linkedin" iconType="fab" href="https://www.linkedin.com/in/ralabbe" target="_blank" color="red" />
                 <ContactFormButton text="Email Me" color="red" />
                 {/* <Button text="Call me" icon="phone" color="red" href="tel:9546017186" /> */}
               </div>
@@ -84,7 +85,7 @@ const AboutMeElement = () => {
               <span className={`styledTextLarge ${styles.footerText}`}>View More</span>
               <div className={styles.footerButtonWrapper}>
                 <Button text="Resume" icon="file" href="https://www.ralabbe.com/files/RafaelLabbe_Resume.pdf" target="_blank" />
-                <Button text="Linkedin" icon="linkedin" iconType="fab" href="https://www.linkedin.com/in/ralabbe" target="_blank" />
+                <Button href="https://github.com/ralabbe" text="GitHub" ariaLabel="View my Github repo" target="_blank" icon="github" iconType="fab" />
               </div>
             </div>
           </div>
