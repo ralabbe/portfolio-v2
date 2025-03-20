@@ -56,7 +56,6 @@
     position: relative;
     box-sizing: border-box;
     border-radius: 10px;
-    /* overflow: hidden; */
     box-shadow: 0 7px 4px rgba(0,0,0,.2);
 }
 
@@ -75,7 +74,6 @@
 
 .imgWrapper {
     position: relative;
-    overflow: hidden;
     height: 320px;
     max-height: 30vh;
     border-radius: 10px 10px 0 0;
@@ -118,7 +116,6 @@
 
 .fullContent {
     max-height: calc(85vh - 100px);
-    overflow: hidden;
     border-radius: 7px 7px 0 0;
 }
 
