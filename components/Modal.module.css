@@ -28,6 +28,7 @@
     animation-duration: .4s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
 }
 
 .close {
@@ -56,6 +57,7 @@
     position: relative;
     box-sizing: border-box;
     border-radius: 10px;
+    /* overflow: hidden; */
     box-shadow: 0 7px 4px rgba(0,0,0,.2);
 }
 
@@ -74,6 +76,7 @@
 
 .imgWrapper {
     position: relative;
+    overflow: hidden;
     height: 320px;
     max-height: 30vh;
     border-radius: 10px 10px 0 0;
@@ -116,6 +119,7 @@
 
 .fullContent {
     max-height: calc(85vh - 100px);
+    overflow: hidden;
     border-radius: 7px 7px 0 0;
 }
 
@@ -158,9 +162,9 @@
 }
 
 @keyframes popin {
-    from, to { transform: scale(1.05); }
-    50% { transform: scale(1.15); }
-    75% { transform: scale(1); }
+    0% { opacity: 0; }
+    50% { transform: scale(1.05); opacity: 1; }
+    80% { transform: scale(1); }
 }
 
 @media (max-width: 550px){

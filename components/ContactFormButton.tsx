@@ -11,13 +11,17 @@ const ContactFormButton = ({
 }) => {
     const [isModalActive, setIsModalActive] = useState(false);
 
+    function enableModal(){
+        setIsModalActive(true);
+    }
+
     function checkActiveModal(){
-        return isModalActive === true ? <Modal content={<ContactForm />} onClose={() => { setIsModalActive(false); }} /> : '';
+        return isModalActive === true ? <Modal content={<><ContactForm /></>} onClose={() => { setIsModalActive(false); }} /> : '';
     }
 
     return (
         <>
-            <Button color={color} text={text} icon={icon} onClick={() => { setIsModalActive(true); }} />
+            <Button color={color} text={text} icon={icon} onClick={enableModal} />
             {checkActiveModal()}
         </>
     );

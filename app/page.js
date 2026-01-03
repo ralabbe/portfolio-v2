@@ -6,12 +6,12 @@ import HomeSkillsets from "@/components/HomeSkillsets";
 import HomeAboutMe from "@/components/HomeAboutMe";
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <Hero />
-      <HomeMyWork />
-      <HomeSkillsets />
-      <HomeAboutMe />
-    </main>
-  );
+    return (
+        <main className={styles.main}>
+            <Hero />
+            <HomeMyWork />
+            <HomeSkillsets />
+            <HomeAboutMe />
+        </main>
+    );
 }

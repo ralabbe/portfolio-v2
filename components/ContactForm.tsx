@@ -16,13 +16,7 @@ const ContactForm = () => {
 
     const { executeRecaptcha } = useReCaptcha();
 
-    async function formSubmit(e) {
-        e.preventDefault();
-
-        setTimeout(() => {
-            setFormSent(true);
-        }, 1500)
-
+    async function formSubmit(){
         const token = await executeRecaptcha("form_submit");
 
         setSending(true);
@@ -35,21 +29,20 @@ const ContactForm = () => {
             token: token,
         });
 
-        console.log(response);
-
         if (typeof response === 'object' && response.success === true){
             setFormSent(true)
         } else {
             setFormSendError(true);
         }
+
         setSending(false);
     }
     
     if (formSent === true){
-        return(
+        return (
             <div className={styles.formSentMessageWrapper}>
                 <p className={styles.formHeaderWrapper}><span className={`styledTextMedium ${styles.formHeader}`}>Your message has been sent!</span></p>
-                <p>Thanks for getting in touch! I&amp;ll email back as soon as I get the chance. In the meantime feel free to check out more of my portfolio.</p>
+                <p>Thanks for getting in touch! I&quot;ll email back as soon as I get the chance. In the meantime feel free to check out more of my portfolio.</p>
             </div>
         );
     } else {
@@ -57,7 +50,7 @@ const ContactForm = () => {
             <>
                 <p className={styles.formHeaderWrapper}><span className={`styledTextMedium ${styles.formHeader}`}>Have a question?</span></p>
                 <p>Fill out the form below to get in touch about any of my projects, skillsets, would like to collaborate, or whatever you have on your mind.</p>
-                <form className={styles.formWrapper} onSubmit={(e) => { formSubmit(e); }}>
+                <form className={styles.formWrapper} onSubmit={(e) => { e.preventDefault(); formSubmit(); }}>
                     <div className={styles.inputWrapperDuo}>
                         <div className={styles.inputWrapper}>
                             <label htmlFor="contactName" className={styles.requiredLabel} aria-label="Name - required">Name</label>
@@ -70,7 +63,7 @@ const ContactForm = () => {
                     </div>
                     <div className={styles.inputWrapper}>
                         <label htmlFor="contactQuestion" className={styles.requiredLabel}>Message</label>
-                        <textarea id="contactQuestion" name="contactQuestion" value={message} onChange={(e) => { setMessage(e.target.value) }} placeholder="Enter your question or request." rows="5" required />
+                        <textarea id="contactQuestion" name="contactQuestion" value={message} onChange={(e) => { setMessage(e.target.value) }} placeholder="Enter your question or request." rows={5} required />
                     </div>
                     <div style={{ padding: 5 }}>
                         <Button color="red" buttonType="submit" text={sending === true ? 'Sending...' : 'Submit'} disabled={sending === true ? true : false} />
